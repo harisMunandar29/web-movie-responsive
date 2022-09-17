@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 999;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 100%;
+  color: white;
+}
+
+.logo-container {
+  flex: 1;
+}
+
+.logo {
+  font-family: 'Bebas Neue', cursive;
+  color: #e50914;
+  font-size: 30px;
+}
+
+.menu-container {
+  flex: 6;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+}
+
+.list-menu-items.active {
+  font-weight: bold;
+}
+
+.list-menu-items {
+  margin-right: 30px;
+}
+
+.profile-container {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* .resume_profile img {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 20px;
+  object-fit: auto;
+} */
+
+.profile-text-container {
+  margin: 0 20px;
+}
+
+.toggle {
+  width: 40px;
+  height: 20px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.toggle-icon {
+  color: yellow;
+}
+
+.toggle-ball {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  right: 1px;
+  background-color: black;
+  cursor: pointer;
+  transition: 1s ease all;
+}
+
+.sidebar {
+  width: 50px;
+  height: 100%;
+  background: black;
+  top: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+.left-menu-icon {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.container {
+  background-color: #151515;
+  min-height: calc(100vh - 50px);
+  color: white;
+}
+
+.content-container {
+  margin-left: 50px;
+}
+
+.featured-content {
+  background-color: #e50914;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #151515), url('./img/f-1.jpg');
+  height: 50vh;
+  padding: 50px;
+}
+
+.second-featured-content {
+  background-color: #e50914;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #151515), url('./img/f-2.jpg');
+  height: 50vh;
+  padding: 50px;
+}
+
+.featured-title {
+  width: 200px;
+}
+
+.featured-desc {
+  width: 500px;
+  color: lightgray;
+  margin: 30px 0;
+}
+
+.featured-button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  background-color: #e50914;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+.movie-list-container {
+  padding: 0 20px;
+}
+
+.movie-list-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-list {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+
+.movie-list-item {
+  margin-right: 20px;
+  position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-img {
+  transform: scale(1.2);
+  margin: 0 30px;
+  opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+  opacity: 1;
+}
+
+.movie-list-item-img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+.movie-list-item-title {
+  background-color: #333;
+  font-weight: bold;
+  padding: 0 10px;
+  font-size: 32px;
+  position: absolute;
+  left: 50px;
+  top: 10%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.movie-list-item-desc {
+  background-color: #333;
+  padding: 10px;
+  font-size: 14px;
+  position: absolute;
+  left: 50px;
+  top: 30%;
+  width: 250px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.movie-list-item-button {
+  padding: 10px;
+  background-color: #e50914;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+  bottom: 15px;
+  left: 50px;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.arrow {
+  font-size: 130px;
+  color: black;
+  top: 80px;
+  position: absolute;
+  right: 0;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.container.active {
+  background-color: white;
+}
+
+.movie-list-title.active {
+  color: black;
+}
+
+.nav-container.active {
+  background-color: white;
+  color: black;
+}
+
+.sidebar.active {
+  background-color: white;
+  color: black;
+}
+
+.left-menu-icon.active {
+  color: black;
+}
+
+.toggle.active {
+  background-color: black;
+}
+
+.toggle-ball.active {
+  background-color: white;
+  transform: translateX(-20px);
+}
+
+@media only screen and (max-width: 940px) {
+  .menu-container {
+    display: none;
+  }
+}
